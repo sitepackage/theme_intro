@@ -1,0 +1,65 @@
+  <div class="highlight_wrapper">
+    <div class="highlight">
+        <ul id="highlight">
+        [%- if linklists.${settings.linklist_highlight_main}.links.size || linklists.highlight.links.size %]
+        [%- links = linklists.${settings.linklist_highlight_main}.links || linklists.highlight.links %]
+        [%- foreach link in links %]
+        [% next if !link.featured_image %]                
+          <li>
+            <a href="[% link.uri %]" title="[% link.name | html %]">
+              <span style="background-image: url('[% link.featured_image.src | image_uri %]')"></span>
+            </a>
+          </li>
+          [%- end %]
+          [%- else %]                  
+          <li><span style="background-image: url('[% 'highlight_sample_main.png' | asset_uri %]')"></span></li>
+          <li><span style="background-image: url('[% 'highlight_sample_main.png' | asset_uri %]')"></span></li>
+          [%- end %]
+        </ul>
+      <script type="text/javascript" charset="utf-8">
+      $j(function(){
+        var slider = $j('#highlight').bxSlider({
+          controls: false,
+          displaySlideQty: 1,
+          moveSlideQty: 1,
+          pager: true,
+          auto: true,
+          pause: 6000
+        });
+      });
+      </script>
+    </div> 
+  </div> 
+[% articles = blog.articles(limit = 10) %]
+<div id="blog" class="page">   
+  <h1 class="topic1"><span>[% blog.name %]</span></h1>
+  <div class="padding">
+    [%- if !articles.first %]
+    <p>[% 'Blog is empty' | loc %]</p>
+    [%- else%]
+    <ul>
+      [%- foreach article in articles %]
+      <li>
+        <div class="image">
+          <span class="featured_image" style="background-image: url('[% article.featured_image.src | image_uri ('thumb') %]')"></span>
+        </div>
+        <div class="details">
+          <h2 class="topic2">[% article.name | html | link_to article.uri %]</h2>
+          <div class="author">[% article.author %], [% article.published_at | date ('%x') %]</div>
+          <div class="excerpt">
+            [%- if article.excerpt %]
+            [% article.excerpt %]
+            [%- else %]
+            [% article.content | strip_html | truncatewords (108, '&hellip;' ) %]
+            [%- end %]
+            [% 'See more' | link_to (article.uri) %]
+          </div>
+        </div>
+        <div class="clear"></div>
+      </li>
+      [%- end %]
+    </ul>
+    [%- end %]
+    [% pageset | pagination if pageset && pageset.last_page > 1 %]
+  </div>
+</div>

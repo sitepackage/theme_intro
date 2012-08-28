@@ -1,0 +1,39 @@
+<div id="article" class="page">
+  <div class="highlight_wrapper">
+    <div class="highlight">
+        <ul id="highlight">
+        [%- if linklists.${settings.linklist_highlight_main}.links.size || linklists.highlight.links.size %]
+        [%- links = linklists.${settings.linklist_highlight_main}.links || linklists.highlight.links %]
+        [%- foreach link in links %]
+        [% next if !link.featured_image %]                
+          <li>
+            <a href="[% link.uri %]" title="[% link.name | html %]">
+              <span style="background-image: url('[% link.featured_image.src | image_uri %]')"></span>
+            </a>
+          </li>
+          [%- end %]
+          [%- else %]                  
+          <li><span style="background-image: url('[% 'highlight_sample_main.png' | asset_uri %]')"></span></li>
+          <li><span style="background-image: url('[% 'highlight_sample_main.png' | asset_uri %]')"></span></li>
+          [%- end %]
+        </ul>
+      <script type="text/javascript" charset="utf-8">
+      $j(function(){
+        var slider = $j('#highlight').bxSlider({
+          controls: false,
+          displaySlideQty: 1,
+          moveSlideQty: 1,
+          pager: true,
+          auto: true,
+          pause: 6000
+        });
+      });
+      </script>
+    </div> 
+  </div>    
+  <h1 class="topic1"><span>[% article.name | html %]</span></h1>
+  <div class="padding">
+    <div class="author">[% 'Posted by' | loc %] [% article.author %], [% article.published_at | date ('%x') %]</div>
+    [% article.content %]
+  </div>
+</div>

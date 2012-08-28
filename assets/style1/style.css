@@ -1,0 +1,171 @@
+.widgets {
+  background: url('widgets.png') no-repeat;
+}
+.buttons {
+  background: url('buttons.png') no-repeat;
+}
+body{
+	background-color:#f3f3f3;
+}
+
+/*------------------- Font Color --------------------*/
+body,
+#header,
+#main,
+#footer,
+#header .nav2 a:hover,
+#main .topic1,
+#main #product .topic1 a,
+#main #product .topic1 a:hover,
+#frontpage .column .topic2,
+#footer .socials_wrapper .topic1,
+#discussion .listing td a,
+#header .nav li a,
+#header .cart_status a span,
+#content_wrapper .account,
+#content_wrapper .account .signup:hover,
+#footer .logged_in li a:hover{
+	color:#000;
+}
+#sidebar1,
+#sidebar1 li a,
+#header .nav2 a,
+#header .nav li a:hover,
+#header .cart_status a:hover span,
+#content_wrapper .account .button,
+#content_wrapper .account .signup,
+#discussion .listing th,
+#cart .items th,
+#collection .subcategory a:hover,
+#header .cart_status a span{
+  color:#fff;
+}
+#header .logged_in li a{
+	color:#dddddd;
+}
+
+#header a,
+#header li a,
+#main a,
+#main li a,
+#footer a,
+#footer li a,
+#blog .details .topic2 a,
+#cart_form .fl,
+#blog .author,
+#article .author,
+#header .site_slogan,
+#discussion .breadcrumb a,
+#discussion .message a,
+#main.column_one .column .bullets small,
+#comments li .meta span,
+#main .column li a:hover,
+#footer a:hover,
+#content_wrapper .account .logged_in  li a:hover,
+#discussion .listing td a:hover,
+#discussion .original_post .fl
+#header a:hover,
+#header li a:hover,
+#main a:hover,
+#main li a:hover,
+#footer a:hover,
+#footer li a:hover,
+#header .logo_wrapper .site_name,
+#blog .details .topic2 a:hover,
+#collection .grid .price,
+#discussion .breadcrumb a:hover,
+#frontpage #collection .topic1,
+#frontpage #collection li a:hover,
+#cart .summary .total_price,
+#blog .excerpt a,
+#blog .excerpt a:hover,
+#frontpage .column li a:hover{
+	color:#777;
+}
+#collection .subcategory a,
+#main .column li a,
+#footer .copyright a,
+#footer .copyright a:hover,
+#collection li a,
+#content_wrapper .account .logged_in em,
+#content_wrapper .account .logged_in li a{
+	color:#444;
+}
+/*------------------- Background Color --------------------*/
+#collection .subcategory a{
+  background-color:#ececec;
+}
+#discussion .listing th,
+#cart .items th{
+	background-color:#000;
+}
+#header .nav li a:hover,
+#header .logged_in li a:hover,
+#content_wrapper .account fieldset a:hover.signup{
+	background-color:#eeeeee;
+}
+#collection .subcategory a:hover{
+  background-color:#000;
+}
+#discussion .page .padding,
+#comments li .meta{
+	background-color:#fef3f7;
+}
+#header .nav,
+#header .nav2 li a:hover{
+  background-color:#fff;
+}
+#sidebar1 li a:hover,
+#header .cart_status,
+#header .nav li a:hover{
+  background-color:#000;
+}
+#header .nav2{
+  background-color:#000;
+}
+#discussion .page .padding,
+#comments li .meta,
+#discussion .listing .hover,
+#content_wrapper .account,
+#content_wrapper .search{
+  background-color:#f1f1f1;
+}
+#sidebar1 .category_container {
+	background-color:#010101;
+}
+#content_wrapper .account .button{
+	background-color:#000;
+}
+#content_wrapper .account .signup{
+  background-color:#545454;
+}
+#sidebar1.dark,
+#sidebar1.dark li a{
+  color:#000;
+}
+#sidebar1.dark li a:hover{
+  background-color:#fff;
+}
+/*------------------- Border Color --------------------*/
+#frontpage .column li{
+	border-bottom:1px dashed #545454;
+}
+#cart .items td,
+#blog li,
+#discussion .listing td{
+	border-bottom:1px dashed #545454;
+}
+#header .nav2 li a{
+  border-right:1px solid #545454;
+}
+#header .nav2 .last a{
+  border-right:none;
+}
+#product .topic1,
+#product .details li{
+  border-bottom:1px solid #f0f0f0;
+}
+#main.column_one .bx-pager a:hover,
+#main .bx-pager a:hover{
+	color:#fff;
+}
