@@ -108,7 +108,7 @@
         
         [%- if !settings.collection_enabled %]
         <div class="nav-left sidebar collection">
-          <h2 class="topic2" title="[% 'Collection' | loc %]"><span>[% 'Collection' | loc %]</span></h2>                  
+          <h2 class="topic2" title="[% 'Collection' | loc %]"><span>[% 'Collections' | loc %]</span></h2>                  
           [%- if linklists.collections.links %]
           <ul >
             [%- foreach link in linklists.collections.links %]
