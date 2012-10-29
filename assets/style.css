@@ -326,19 +326,19 @@ form .hint_area {
 #header .logo_wrapper,
 #header .logo {
 	width:360px;
-  height:75px;
+  height:111px;
 }
 #header .logo_wrapper {
 	position:absolute;
   overflow: hidden;
-	top:41px;
+	top:5px;
   left:0px;
 }
 #header .logo_wrapper a{
 	text-decoration:none;
 }
 #header .logo_wrapper .logo {
-  background: no-repeat left top;
+  background: no-repeat center center;
 	display:block;
 }
 #header .logo_wrapper .site_name {
@@ -346,7 +346,7 @@ form .hint_area {
 	height:50px;
   display:block;
 	padding:0;
-  margin:0 0 0 5px;
+  margin:35px 0 0 5px;
 	font-size:3em;
 	line-height:1em;
 	overflow:hidden;
@@ -434,7 +434,8 @@ form .hint_area {
 }
 #header .nav2{
 	width:915px;
-	height:41px;	
+	height:41px;
+  overflow:hidden;
   position:absolute;
   padding:0 15px;
   top:125px;
@@ -455,7 +456,7 @@ form .hint_area {
 	display:inline;
 }
 #header .nav2 li a {
-	margin:0;
+	margin:0 0 10px 0;
   padding:0.3em 1em;
 	font-size:1.1em;
 	display:inline-block;
@@ -1329,11 +1330,14 @@ form .hint_area {
 #product .extra_images li span {
 	display: block;
 	float: left;
-	width: 48px;
-	height: 48px;
+	width: 75px;
+	height: 75px;
 	background: transparent no-repeat center center;
-	margin: 0 10px 10px 0;
+	margin: 0 8px 10px 0;
 	border: 1px solid #eaeaea;
+}
+#product .extra_images .last span {
+	margin: 0 0px 10px 0;  
 }
 #product .buy {
   float: left;
