@@ -12,7 +12,7 @@
 <title>[% page_title _ ' | ' _ product.type _ ' ' _ product.vendor | html %]</title>
 <meta name="description" content="[% product.type | html %] [% product.vendor | html %] - [% product.name | html %] - [% product_variants.join(', ') %]" />
 [%- case 'collection.tt' %]
-<title>[% page_title %] | [% shop.domain if !current_type && !current_vendor %][% ' ' _ current_type | html if current_type %][% ' ' _ current_vendor | html if current_vendor %]</title>
+<title>[% page_title | html %] | [% shop.domain if !current_type && !current_vendor %][% ' ' _ current_type | html if current_type %][% ' ' _ current_vendor | html if current_vendor %]</title>
 [%- if collection.content %]
 <meta name="description" content="[% collection.content | strip_html | collapse | truncatewords (140) %]" />
 [%- elsif collection.tags.size %]
